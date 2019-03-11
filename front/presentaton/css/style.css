@@ -354,29 +354,121 @@
     width: 56px;
     height: 56px;
     transform-origin: 50% 248px 0;
+    transition: all 0.4s;
+}
+.planet:hover {
+    box-shadow: white 0 0 15px 1px;
+}
+
+.planet:hover div p {
+    transform: scale(1.2);
+}
+
+.planet div p {
+    font-family: 'GothamPro', sans-serif;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 400;
+    position: absolute;
+    transition: all 0.4s;
+}
+.reloc div p {
+    top: -60px;
+    text-align: center;
 }
 
 .hr-supp {
     transform: rotateZ(45deg);
 }
 
+.hr-supp div {
+    transform: rotateZ(-45deg);
+}
+
+.hr-supp p {
+    top: -13px;
+    left: 70px;
+}
 .corporate {
     transform: rotateZ(90deg);
+}
+
+.corporate div {
+    transform: rotateZ(-90deg);
+}
+
+.corporate p{
+    top: -13px;
+    left: 70px;
 }
 .turnkey {
     transform: rotateZ(135deg);
 }
-.it-recr{
+
+.turnkey div {
+    transform: rotateZ(-135deg);
+}
+.turnkey p {
+    top: -13px;
+    left: 70px;
+}
+
+.it-recr {
     transform: rotateZ(180deg);
 }
-.facilit{
+
+.it-recr div {
+    transform: rotateZ(-180deg);
+}
+.it-recr p {
+    bottom: -60px;
+    left: 0px;
+    text-align: center;
+    word-wrap: break-spaces;
+}
+
+.facilit {
     transform: rotateZ(225deg);
 }
-.blockchain{
+
+.facilit div {
+    transform: rotateZ(-225deg);
+}
+
+.facilit p {
+    top: -13px;
+    left: -70px;
+    text-align: center;
+}
+
+.blockchain {
     transform: rotateZ(270deg);
 }
-.accounting{
+
+.blockchain div {
+    transform: rotateZ(-270deg);
+}
+.blockchain p {
+    top: -13px;
+    left: -70px;
+    text-align: center;
+}
+
+.accounting {
     transform: rotateZ(315deg);
+}
+
+.accounting div {
+    transform: rotateZ(-315deg);
+}
+.accounting p {
+    top: -13px;
+    left: -70px;
+}
+
+.planet div {
+    position: relative;
+    margin-top: 27px;
 }
 
 .expertise-img-container img {
@@ -384,4 +476,32 @@
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
+}
+
+.footer-p p {
+    font-family: 'MuseoSansCyrl700', sans-serif;
+    color:  #333333;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18px;
+    text-align: center;
+    padding: 16px;
+}
+.footer-p span {
+    text-decoration: line-through;
+}
+
+.footer {
+    background-color:  rgba(0, 0, 0, 0.2);
+}
+
+.footer .container {
+    justify-content: space-around;
+    padding: 32px;
+}
+
+.contact {
+    font-family: 'MuseoSansCyrl700', sans-serif;
+    color:  #333333;
+    font-size: 18px;
 }
