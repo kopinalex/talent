@@ -1,51 +1,70 @@
-@font-face {
-    font-family: MuseoSansCyrl100;
-    src: url('../fonts/MuseoSansCyrl-100.otf');
-}
+/*@font-face {*/
+/*font-family: MuseoSansCyrl100;*/
+/*src: url('../fonts/MuseoSansCyrl-100.otf');*/
+/*}*/
 
-@font-face {
-    font-family: MuseoSansCyrl100i;
-    src: url('../fonts/MuseoSansCyrl-100Italic.otf');
-}
+/*@font-face {*/
+/*font-family: MuseoSansCyrl100i;*/
+/*src: url('../fonts/MuseoSansCyrl-100Italic.otf');*/
+/*}*/
 
-@font-face {
-    font-family: MuseoSansCyrl300;
-    src: url('../fonts/MuseoSansCyrl-300.otf');
-}
+/*@font-face {*/
+/*font-family: MuseoSansCyrl300;*/
+/*src: url('../fonts/MuseoSansCyrl-300.otf');*/
+/*}*/
 
-@font-face {
-    font-family: MuseoSansCyrl300i;
-    src: url('../fonts/MuseoSansCyrl-300Italic.otf');
-}
+/*@font-face {*/
+/*font-family: MuseoSansCyrl300i;*/
+/*src: url('../fonts/MuseoSansCyrl-300Italic.otf');*/
+/*}*/
 
-@font-face {
-    font-family: MuseoSansCyrl500;
-    src: url('../fonts/MuseoSansCyrl-500.otf');
-}
+/*@font-face {*/
+/*font-family: MuseoSansCyrl500;*/
+/*src: url('../fonts/MuseoSansCyrl-500.otf');*/
+/*}*/
 
-@font-face {
-    font-family: MuseoSansCyrl500i;
-    src: url('../fonts/MuseoSansCyrl-500Italic.otf');
-}
+/*@font-face {*/
+/*font-family: MuseoSansCyrl500i;*/
+/*src: url('../fonts/MuseoSansCyrl-500Italic.otf');*/
+/*}*/
 
 @font-face {
     font-family: MuseoSansCyrl700;
     src: url('../fonts/MuseoSansCyrl-700.otf');
 }
 
-@font-face {
-    font-family: MuseoSansCyrl700i;
-    src: url('../fonts/MuseoSansCyrl-700Italic.otf');
-}
+/*@font-face {*/
+/*font-family: MuseoSansCyrl700i;*/
+/*src: url('../fonts/MuseoSansCyrl-700Italic.otf');*/
+/*}*/
 
 @font-face {
     font-family: MuseoSansCyrl900;
     src: url('../fonts/MuseoSansCyrl-900.otf');
 }
 
+/*@font-face {*/
+/*font-family: MuseoSansCyrl900i;*/
+/*src: url('../fonts/MuseoSansCyrl-900Italic.otf');*/
+/*}*/
 @font-face {
-    font-family: MuseoSansCyrl900i;
-    src: url('../fonts/MuseoSansCyrl-900Italic.otf');
+    font-family: 'Gotham Pro Bold';
+    src: url('../fonts/GothamPro-Bold.eot');
+    src: url('../fonts/GothamPro-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/GothamPro-Bold.woff') format('woff'),
+    url('../fonts/GothamPro-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham Pro Regular';
+    src: url('../fonts/GothamPro.eot');
+    src: url('../fonts/GothamPro.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/GothamPro.woff') format('woff'),
+    url('../fonts/GothamPro.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 .container {
@@ -64,7 +83,7 @@
     background-color: #333333;
     height: 684px;
     /*width: 100%;*/
-    width: 100vw;
+    width: 100%;
     overflow: hidden;
 }
 
@@ -125,6 +144,44 @@
     z-index: 5;
     margin-top: 17px;
     margin-left: 68px;
+    position: relative;
+    filter: grayscale(1);
+}
+
+.square {
+    position: absolute;
+    box-sizing: border-box;
+    border: #ffffff solid 6px;
+    width: 92px;
+    height: 93px;
+    transition: opacity 0.7s;
+}
+.square:hover {
+    opacity: 0;
+}
+
+.faces:hover {
+filter: grayscale(0);
+}
+
+.square1 {
+    top: 173px;
+}
+
+.square2 {
+    top: 265px;
+    left: 273px;
+}
+
+.square3 {
+    top: 173px;
+    left: 546px;
+    width: 90px;
+}
+
+.square4 {
+    left: 363px;
+    bottom: 3px;
 }
 
 .preferences {
@@ -288,7 +345,7 @@
 }
 
 .expertise h3 {
-    font-family: 'GothamPro', sans-serif;
+    font-family: 'Gotham Pro Bold', sans-serif;
     color: #ffffff;
     font-size: 30px;
     text-transform: uppercase;
@@ -305,9 +362,7 @@
 
 .outer-circle {
     border-radius: 50%;
-    border-width: 1px;
-    border-color: rgba(255, 255, 255, .5);
-    border-style: dashed;
+    border: 1px dashed rgba(255, 255, 255, .5);
     width: 556px;
     height: 556px;
 }
@@ -315,9 +370,7 @@
 .circle-2 {
     width: 86%;
     height: 86%;
-    border-width: 1px;
-    border-color: rgba(255, 255, 255, .5);
-    border-style: dashed;
+    border: 1px dashed rgba(255, 255, 255, .5);
     opacity: 1;
     border-radius: 50%;
     margin: 7% auto;
@@ -326,9 +379,7 @@
 .circle-3 {
     width: 90%;
     height: 90%;
-    border-width: 4px;
-    border-color: #ffffff;
-    border-style: solid;
+    border: 4px solid #ffffff;
     opacity: 1;
     border-radius: 50%;
     margin: 5% auto;
@@ -337,12 +388,218 @@
 .circle-4 {
     width: 92%;
     height: 92%;
-    border-width: 1px;
-    border-color: rgba(255, 255, 255, .5);
-    border-style: dashed;
+    border: 1px dashed rgba(255, 255, 255, .5);
     opacity: 1;
     border-radius: 50%;
     margin: 4% auto;
+}
+
+.circle-5 {
+    width: 78%;
+    height: 78%;
+    border: 1px dashed rgba(255, 255, 255, .5);
+    opacity: 1;
+    border-radius: 50%;
+    margin: 11% auto;
+}
+
+.sat {
+    background-color: #ffffff;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    position: absolute;
+    top: calc(-3px);
+    left: calc(50% + 3px);
+    transform-origin: -3px 282px 0;
+    transition: all 0.4s;
+}
+
+.sat-inner {
+    top: calc(23.5% - 3px);
+    transform-origin: -3px 159px 0;
+}
+
+.sat1 {
+    transform: rotateZ(30deg);
+    animation: sat1rot 120s linear infinite;
+}
+
+.sat2 {
+    transform: rotateZ(80deg);
+    animation: sat2rot 120s linear infinite;
+}
+
+.sat3 {
+    transform: rotateZ(120deg);
+    animation: sat3rot 120s linear infinite;
+}
+
+.sat4 {
+    transform: rotateZ(165deg);
+    animation: sat4rot 120s linear infinite;
+}
+
+.sat5 {
+    transform: rotateZ(200deg);
+    animation: sat5rot 120s linear infinite;
+}
+
+.sat6 {
+    transform: rotateZ(230deg);
+    animation: sat6rot 120s linear infinite;
+}
+
+.sat7 {
+    transform: rotateZ(280deg);
+    animation: sat7rot 120s linear infinite;
+}
+
+.sat8 {
+    transform: rotateZ(325deg);
+    animation: sat8rot 120s linear infinite;
+}
+
+.sat9 {
+    transform: rotateZ(10deg);
+    animation: sat9rot 120s linear infinite;
+}
+
+.sat10 {
+    transform: rotateZ(60deg);
+    animation: sat10rot 120s linear infinite;
+}
+
+.sat11 {
+    transform: rotateZ(130deg);
+    animation: sat11rot 120s linear infinite;
+}
+
+.sat12 {
+    transform: rotateZ(200deg);
+    animation: sat12rot 120s linear infinite;
+}
+
+.sat13 {
+    transform: rotateZ(290deg);
+    animation: sat13rot 120s linear infinite;
+}
+
+@keyframes sat1rot {
+    0% {
+        transform: rotateZ(30deg);
+    }
+    to {
+        transform: rotateZ(390deg)
+    }
+}
+
+@keyframes sat2rot {
+    0% {
+        transform: rotateZ(80deg);
+    }
+    to {
+        transform: rotateZ(440deg)
+    }
+}
+
+@keyframes sat3rot {
+    0% {
+        transform: rotateZ(120deg);
+    }
+    to {
+        transform: rotateZ(480deg)
+    }
+}
+
+@keyframes sat4rot {
+    0% {
+        transform: rotateZ(165deg);
+    }
+    to {
+        transform: rotateZ(525deg)
+    }
+}
+
+@keyframes sat5rot {
+    0% {
+        transform: rotateZ(200deg);
+    }
+    to {
+        transform: rotateZ(560deg)
+    }
+}
+
+@keyframes sat6rot {
+    0% {
+        transform: rotateZ(230deg);
+    }
+    to {
+        transform: rotateZ(590deg)
+    }
+}
+
+@keyframes sat7rot {
+    0% {
+        transform: rotateZ(280deg);
+    }
+    to {
+        transform: rotateZ(640deg)
+    }
+}
+
+@keyframes sat8rot {
+    0% {
+        transform: rotateZ(325deg);
+    }
+    to {
+        transform: rotateZ(685deg)
+    }
+}
+
+@keyframes sat9rot {
+    0% {
+        transform: rotateZ(10deg);
+    }
+    to {
+        transform: rotateZ(-350deg)
+    }
+}
+
+@keyframes sat10rot {
+    0% {
+        transform: rotateZ(60deg);
+    }
+    to {
+        transform: rotateZ(-300deg)
+    }
+}
+
+@keyframes sat11rot {
+    0% {
+        transform: rotateZ(130deg);
+    }
+    to {
+        transform: rotateZ(-230deg)
+    }
+}
+
+@keyframes sat12rot {
+    0% {
+        transform: rotateZ(200deg);
+    }
+    to {
+        transform: rotateZ(-130deg)
+    }
+}
+
+@keyframes sat13rot {
+    0% {
+        transform: rotateZ(290deg);
+    }
+    to {
+        transform: rotateZ(-70deg)
+    }
 }
 
 .planet {
@@ -356,8 +613,9 @@
     transform-origin: 50% 248px 0;
     transition: all 0.4s;
 }
+
 .planet:hover {
-    box-shadow: white 0 0 15px 1px;
+    box-shadow: white 0 0 10px 1px;
 }
 
 .planet:hover div p {
@@ -365,15 +623,22 @@
 }
 
 .planet div p {
-    font-family: 'GothamPro', sans-serif;
+    font-family: 'Gotham Pro Regular', sans-serif;
     color: #ffffff;
+    background-color: #aa8152;
     font-size: 13px;
     font-weight: 400;
     position: absolute;
     transition: all 0.4s;
 }
+
+.planet div img {
+    padding: 5px;
+}
+
 .reloc div p {
-    top: -60px;
+    top: -65px;
+    left: -5px;
     text-align: center;
 }
 
@@ -389,6 +654,7 @@
     top: -13px;
     left: 70px;
 }
+
 .corporate {
     transform: rotateZ(90deg);
 }
@@ -397,10 +663,11 @@
     transform: rotateZ(-90deg);
 }
 
-.corporate p{
+.corporate p {
     top: -13px;
     left: 70px;
 }
+
 .turnkey {
     transform: rotateZ(135deg);
 }
@@ -408,6 +675,7 @@
 .turnkey div {
     transform: rotateZ(-135deg);
 }
+
 .turnkey p {
     top: -13px;
     left: 70px;
@@ -420,9 +688,10 @@
 .it-recr div {
     transform: rotateZ(-180deg);
 }
+
 .it-recr p {
     bottom: -60px;
-    left: 0px;
+    left: -8px;
     text-align: center;
     word-wrap: break-spaces;
 }
@@ -437,7 +706,7 @@
 
 .facilit p {
     top: -13px;
-    left: -70px;
+    left: -80px;
     text-align: center;
 }
 
@@ -448,9 +717,10 @@
 .blockchain div {
     transform: rotateZ(-270deg);
 }
+
 .blockchain p {
     top: -13px;
-    left: -70px;
+    left: -85px;
     text-align: center;
 }
 
@@ -461,9 +731,10 @@
 .accounting div {
     transform: rotateZ(-315deg);
 }
+
 .accounting p {
     top: -13px;
-    left: -70px;
+    left: -88px;
 }
 
 .planet div {
@@ -478,21 +749,33 @@
     transform: translateX(-50%) translateY(-50%);
 }
 
+.expertise-logo {
+    box-shadow: #aa8152 0 35px 20px 20px;
+}
+
+.footer-p {
+    margin-bottom: 80px;
+}
+
 .footer-p p {
     font-family: 'MuseoSansCyrl700', sans-serif;
-    color:  #333333;
+    color: #333333;
     font-size: 18px;
     font-weight: 700;
     line-height: 18px;
     text-align: center;
     padding: 16px;
 }
+
 .footer-p span {
     text-decoration: line-through;
 }
 
 .footer {
-    background-color:  rgba(0, 0, 0, 0.2);
+    width: 100vw;
+    background-color: rgb(215, 215, 215);
+    position: fixed;
+    bottom: 0;
 }
 
 .footer .container {
@@ -502,6 +785,54 @@
 
 .contact {
     font-family: 'MuseoSansCyrl700', sans-serif;
-    color:  #333333;
+    color: #333333;
     font-size: 18px;
+    text-decoration: none;
+    position: relative;
+    padding-left: 25px;
+    transition: all 0.3s;
+}
+
+.contact-header {
+    font-family: 'Gotham Pro Bold', sans-serif;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.mail::before {
+    position: absolute;
+    content: ' ';
+    width: 18px;
+    height: 11px;
+    background: url("../img/footer/envelope.png") no-repeat;
+    background-size: contain;
+    bottom: 3px;
+    left: -5px;
+}
+
+.phone::before {
+    position: absolute;
+    content: ' ';
+    width: 14px;
+    height: 14px;
+    background: url("../img/footer/phone-receiver.png") no-repeat;
+    background-size: contain;
+    bottom: 3px;
+    left: 0px;
+}
+
+.web::before {
+    position: absolute;
+    content: ' ';
+    width: 15px;
+    height: 14px;
+    background: url("../img/footer/home.png") no-repeat;
+    background-size: contain;
+    bottom: 1px;
+    left: 0px;
+}
+
+.mail:hover,
+.web:hover {
+    transform: translateY(-2px);
 }
