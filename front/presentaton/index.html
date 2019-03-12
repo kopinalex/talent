@@ -2,79 +2,89 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Tilent</title>
+    <title>Talent</title>
+    <link rel="icon" type="image/png" href="favicon.png"/>
     <link rel="stylesheet" href="css/reset.css" class="style">
     <link rel="stylesheet" href="css/style.css" class="style">
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+            crossorigin="anonymous"></script>
 </head>
 <body>
+<button class="down-button" id="down-button" >
+    <img src="img/down-arrow.svg" alt="">
+</button>
 <section class="main">
     <div class="container main-page">
         <div class="main-left-col">
-            <img src="./img/logo.png" alt="">
-            <div class="line"></div>
-            <h2 class="tagline">We match the best candidates for you</h2>
+            <img class="fade-blur" src="./img/logo.png" alt="" id="logo">
+            <div class="line" id="line"></div>
+            <h2 class="tagline" id="tagline">We match the best candidates for you</h2>
         </div>
         <div class="right-col">
             <div class="back-gold">
             </div>
-            <div class="faces">
+            <div class="faces" id="faces">
                 <img src="./img/faces.png" alt="">
-                <div class="square square1"></div>
-                <div class="square square2"></div>
-                <div class="square square3"></div>
-                <div class="square square4"></div>
+                <div class="square square1" id="square1"></div>
+                <div class="square square2" id="square2"></div>
+                <div class="square square3" id="square3"></div>
+                <div class="square square4" id="square4"></div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="preferences">
+<section class="preferences" id="preferences">
     <div class="container">
         <div class="pref-header">
             <h2>our services match your values</h2>
         </div>
         <div class="d-flex">
-            <div class="pref-item light-gray">
+            <div class="pref-item ght-gray" id="pref1">
                 <div class="img-container">
-                    <img src="./img/watch.png" alt="">
+                    <img src="./img/watch.png" alt="" id="pref1-1">
                 </div>
-                <h5>Time</h5>
-                <p>Your time is our main value</p>
+                <h5 id="pref1-2">Time</h5>
+                <p id="pref1-3">Your time is our main value</p>
             </div>
-            <div class="pref-item light-gold">
+
+            <div class="pref-item light-gold" id="pref2">
                 <div class="img-container">
-                    <img src="./img/money.png" alt="">
+                    <img src="./img/money.png" alt="" id="pref2-1">
                 </div>
-                <h5>Service fee</h5>
-                <p>The price is our competitive advantage on the market</p>
+                <h5 id="pref2-2">Service fee</h5>
+                <p id="pref2-3">The price is our competitive advantage on the market</p>
             </div>
-            <div class="pref-item light-gray">
+
+            <div class="pref-item light-gray" id="pref3">
                 <div class="img-container">
-                    <img src="./img/medal.png" alt="">
+                    <img src="./img/medal.png" alt="" id="pref3-1">
                 </div>
-                <h5>Quality</h5>
-                <p>Hard and soft skills matter</p>
+                <h5 id="pref3-2">Quality</h5>
+                <p id="pref3-3">Hard and soft skills matter</p>
             </div>
-            <div class="pref-item gray">
+            <div class="pref-item gray" id="pref4">
                 <div class="img-container">
-                    <img src="img/deal.png" alt="">
+                    <img src="img/deal.png" alt="" id="pref4-1">
                 </div>
-                <h5>Transparency</h5>
-                <p>Open process leads to win-win result</p>
+                <h5 id="pref4-2">Transparency</h5>
+                <p id="pref4-3">Open process leads to win-win result</p>
             </div>
-            <div class="pref-item semi-gold">
+            <div class="pref-item semi-gold" id="pref5">
                 <div class="img-container ">
-                    <img src="img/team.png" alt="">
+                    <img src="img/team.png" alt="" id="pref5-1">
                 </div>
-                <h5>Team</h5>
-                <p>Multifunctional team brings more expertise</p>
+                <h5 id="pref5-2">Team</h5>
+                <p id="pref5-3">Multifunctional team brings more expertise</p>
             </div>
-            <div class="pref-item gray">
+            <div class="pref-item gray" id="pref6">
                 <div class="img-container">
-                    <img src="img/home.png" alt="">
+                    <img src="img/home.png" alt="" id="pref6-1">
                 </div>
-                <h5>Screening</h5>
-                <p>Pre-tech screening included</p>
+                <h5 id="pref6-2">Screening</h5>
+                <p id="pref6-3">Pre-tech screening included</p>
             </div>
         </div>
         <div class="d-flex">
@@ -96,12 +106,12 @@
     </div>
 </section>
 
-<section class="cloud">
+<section class="cloud" id="cloud">
     <div class="container">
         <img src="img/cloud.png" alt="">
     </div>
 </section>
-<section class="expertise">
+<section class="expertise" id="expertise">
     <div class="container">
         <h3>Our expertise</h3>
         <div class="expertise-img-container">
@@ -185,7 +195,7 @@
 <section class="footer-p">
     <div class="container">
         <p>We <span>MARRY</span> Match your requirements
-            <br>Give us a shortcall to get personal request for quotation!</p>
+            <br>Give us a short call to get personal request for quotation!</p>
     </div>
 </section>
 <section class="footer">
@@ -193,8 +203,10 @@
         <p class="contact-header">Your personal contact:</p>
         <a class="contact mail" href="mailto:meetus@try2myt.com">meetus@try2myt.com</a>
         <p class="contact phone">+38067-218-21-70</p>
-        <a class="contact web" href="http://try2myt.com">www.try2myt.com</a>
+        <a class="contact web" href="http://try2myt.com/platform">www.try2myt.com/platform</a>
     </div>
 </section>
+
+<script src="scripts/index.js"></script>
 </body>
 </html>
