@@ -1,1 +1,2 @@
 export const CHANGE_NAME = 'CHANGE_NAME';
+export const SET_NAME_DEFINED = 'SET_NAME_DEFINED';

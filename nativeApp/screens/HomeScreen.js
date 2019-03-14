@@ -4,49 +4,63 @@ import {
     Platform,
     ScrollView,
     StyleSheet,
-    Text,
+    Text, Button,
     TouchableOpacity,
     View, TextInput,
 } from 'react-native';
 import {WebBrowser} from 'expo';
+// import ExtraScreen from 'ExtraScreen';
 
 import {MonoText, PrettySlyledText} from '../components/StyledText';
-import {styles as St} from './homeScreenStyle'
-import {setName} from "../actions/startScreenActions";
+import {styles as commonStyles} from './homeScreenStyle'
+import {setName, setNameDefined} from "../actions/startScreenActions";
 import {connect} from "react-redux";
 
 class HomeScreen extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            name: '',
+        }
+    }
+
     static navigationOptions = {
         header: null,
     };
 
     render() {
-        const {name} = this.props;
+        const {name, nameIsSet, setName, setNameDefined} = this.props;
         return (
             <ScrollView style={styles.container}>
                 <View style={styles.container} contentContainerStyle={styles.contentContainer}>
-                    <View style={styles.welcomeContainer}>
-                        <Image source={require('../assets/images/logo.png')} style={styles.welcomeImage}/>
-                    </View>
-
-                    <View style={St.flexContainer}>
+                    <View style={commonStyles.flexContainer}>
                         <TouchableOpacity>
                             <Image source={require('../assets/images/icon1.png')}/>
                         </TouchableOpacity>
                     </View>
 
-                    <TextInput style={St.textInput}
-                               placeholder={'input your name'}
-                               onChangeText={(text) => {
-                                   this.props.setName(text)
-                               }}
-                    />
+                    {!nameIsSet && <TextInput style={commonStyles.textInput}
+                                              placeholder={'input your name'}
+                                              onChangeText={(text) => {
+                                                  this.setState({name: text.trim()});
+                                                  setName(text.trim());
+                                              }}
+                    />}
+                    <View style={commonStyles.buttonContainer}>
+                        {!nameIsSet && <Button disabled={!this.state.name.trim()} title={'Готово'} onPress={()=>{setNameDefined(true)}}/>}
 
+                        {nameIsSet && <Button title="Перейти" color={commonStyles.buttonStyle.color}
+                                onPress={this.handlePressButton}/>}
+                    </View>
                 </View>
 
             </ScrollView>
         );
     }
+
+    handlePressButton = () => {
+        this.props.navigation.navigate('Extra');
+    };
 
     handleChangeName = (text) => {
         this.props.setName(text);
@@ -149,12 +163,12 @@ const styles = StyleSheet.create({
             },
         }),
         alignItems: 'center',
-        backgroundColor: '#fbfbfb',
+        backgroundColor: '#bebebe',
         paddingVertical: 20,
     },
     tabBarInfoText: {
         fontSize: 17,
-        color: 'rgba(96,100,109, 1)',
+        color: '#065798',
         textAlign: 'center',
     },
     navigationFilename: {
@@ -189,13 +203,15 @@ const mapDispatchToProps = (dispatch) => {
     return {
         setName: (name) => {
             dispatch(setName(name))
-        }
+        },
+        setNameDefined: (isDefined) => {dispatch(setNameDefined(isDefined))}
     }
 };
 
 const mapStateToPros = (state) => {
     return {
-        name: state.infoReducer.name
+        name: state.infoReducer.name,
+        nameIsSet: state.infoReducer.nameIsSet,
     }
 };
 

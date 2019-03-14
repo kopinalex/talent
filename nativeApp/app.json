@@ -12,7 +12,7 @@
     "orientation": "portrait",
     "icon": "./assets/images/icon1.png",
     "splash": {
-      "image": "./assets/images/logo.png",
+      "image": "./assets/images/loading_criss.gif",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },

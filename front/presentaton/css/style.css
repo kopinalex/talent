@@ -377,23 +377,48 @@
 
 .cloud {
     background-color: rgba(0, 0, 0, 0.1);
-    height: 493px;
+    height: 600px;
     overflow: hidden;
+    padding: 45px 0;
 }
 
 .cloud .container {
     /*background-color: #fff;*/
     position: relative;
-    height: 100%;
+    /*height: 100%;*/
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+.container-arc {
+    height: 140px;
 }
 
-.cloud .container img {
+.container-cloud{
+    height: 460px;
+}
+
+.cloud .container .cloud-img {
     max-width: 100%;
+    max-height: 100%;
     position: absolute;
     top: 50%;
     -webkit-transform: scale(1) translateY(-50%);
     -ms-transform: scale(1) translateY(-50%);
     transform: scale(1) translateY(-50%);
+}
+
+.cloud-arc {
+    width: 100%;
+    position: absolute;
+    top: 0;
 }
 
 .expertise {
@@ -1072,7 +1097,7 @@
 }
 
 .footer-p {
-    margin-bottom: 80px;
+    margin-bottom: 110px;
 }
 
 .footer-p p {
@@ -1100,7 +1125,10 @@
 .footer .container {
     -ms-flex-pack: distribute;
     justify-content: space-around;
-    padding: 32px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 25px;
 }
 
 .contact {
@@ -1143,16 +1171,43 @@
     left: 0px;
 }
 
-.web::before {
-    position: absolute;
-    content: ' ';
-    width: 15px;
-    height: 14px;
-    background: url("../img/footer/home.png") no-repeat;
-    background-size: contain;
-    bottom: 1px;
-    left: 0px;
+
+.web{
+    padding: 15px 30px;
+    /*background-color: #aa8152;*/
+    border-radius: 5px;
+    border: solid 4px #aa8152;
+    color: #886344;
+    -webkit-box-shadow: rgba(50,50,50,.4) 5px 5px 15px;
+    box-shadow: rgba(50,50,50,.4) 5px 5px 15px;
+    text-shadow:  5px 5px 5px rgba(50,50,50,.2);
 }
+
+.web:hover {
+    -webkit-box-shadow: rgba(50,50,50,.4) 5px 8px 15px;
+    box-shadow: rgba(50,50,50,.4) 5px 8px 15px;
+    text-shadow:  5px 8px 6px rgba(50,50,50,.2);
+}
+
+.web:active {
+    -webkit-transform: translateY(5px);
+    -ms-transform: translateY(5px);
+    transform: translateY(5px);
+    -webkit-box-shadow: rgba(50,50,50,.4) 5px 2px 15px;
+    box-shadow: rgba(50,50,50,.4) 5px 2px 15px;
+    text-shadow:  2px 2px 3px rgba(50,50,50,.2);
+}
+
+/*.web::before {*/
+/*position: absolute;*/
+/*content: ' ';*/
+/*width: 15px;*/
+/*height: 14px;*/
+/*background: url("../img/footer/home.png") no-repeat;*/
+/*background-size: contain;*/
+/*bottom: 1px;*/
+/*left: 0px;*/
+/*}*/
 
 .mail:hover,
 .web:hover {

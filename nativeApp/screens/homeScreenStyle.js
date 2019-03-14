@@ -22,5 +22,11 @@ export const styles = StyleSheet.create({
         borderRadius: 15,
         padding: 8
     },
+    buttonStyle: {
+        color: '#065798',
+    },
+    buttonContainer:{
+        padding: 10,
+    }
 
 });
